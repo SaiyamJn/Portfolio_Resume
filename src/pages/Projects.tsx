@@ -23,7 +23,6 @@ const Projects = () => {
       name: 'Wally — Personal Finance Management App',
       date: 'Aug 2025 — Present',
       stack: 'React Native, TypeScript, Expo',
-      link: 'https://github.com/SaiyamJn/WallyMobile.git',
       bullets: [
         'Offline-first finance tracker with multi-account support and real-time balance calculations.',
         'Data persistence via AsyncStorage with secure export/import and JSON validation.',
@@ -34,7 +33,7 @@ const Projects = () => {
       name: 'Financial Research AI Agent',
       date: '2025',
       stack: 'Python, FastAPI, LangGraph, LangChain, MongoDB, Redis, React, Plotly, yfinance, Gemini, Groq',
-      link: 'https://github.com/SaiyamJn/Financial-Research-Agent',
+      link: 'https://github.com/SaiyamJn/Financial-Research-Agent.git',
       bullets: [
         'Built an AI-powered financial research assistant for Indian stock market analysis with real-time data ingestion and interactive visualizations.',
         'Implemented technical analysis features including 20-day Moving Average and 14-day RSI with Plotly-based charts and two-stock comparison.',
@@ -131,12 +130,44 @@ const Projects = () => {
                   ))}
                 </ul>
                 {project.link ? (
-                  <span
-                    style={{ color: '#2563eb', fontSize: '0.9rem', fontWeight: 500 }}
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    style={{
+                      color: '#2563eb',
+                      fontSize: '0.9rem',
+                      fontWeight: 500,
+                      textDecoration: 'none',
+                      display: 'inline-block',
+                      marginTop: '0.5rem',
+                      transition: 'color 0.2s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.color = '#1d4ed8';
+                      e.currentTarget.style.textDecoration = 'underline';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.color = '#2563eb';
+                      e.currentTarget.style.textDecoration = 'none';
+                    }}
                   >
-                    Explore More
+                    Explore More →
+                  </a>
+                ) : (
+                  <span
+                    style={{
+                      color: '#64748b',
+                      fontSize: '0.9rem',
+                      fontWeight: 500,
+                      display: 'inline-block',
+                      marginTop: '0.5rem'
+                    }}
+                  >
+                    Explore More →
                   </span>
-                ) : null}
+                )}
               </div>
             ))}
           </div>
