@@ -5,9 +5,12 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Achievements from './pages/Achievements';
 
+// Get base path from vite config (for GitHub Pages)
+const basePath = import.meta.env.BASE_URL;
+
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basePath}>
       <Routes>
         <Route path="/" element={<Home />} />
         {/* Redirect old /about links back to home since About is now part of Home */}
