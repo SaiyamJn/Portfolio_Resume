@@ -7,7 +7,17 @@ const Home = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   // Get base path for GitHub Pages
-  const basePath = import.meta.env.BASE_URL;
+  // BASE_URL will be '/Portfolio_Resume/' in production, '/' in dev
+  const basePath = import.meta.env.BASE_URL || '/';
+  
+  // Helper function to ensure correct path (removes double slashes)
+  const getAssetPath = (path: string) => {
+    // Remove leading slash from path if present
+    const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+    // Ensure basePath ends with / and combine
+    const base = basePath.endsWith('/') ? basePath : `${basePath}/`;
+    return `${base}${cleanPath}`;
+  };
 
   const aboutDescription = 'Learn about my educational background, journey in technology, and how I approach building products that matter. Discover my passion for AI-native development and full-stack engineering.';
 
@@ -15,25 +25,25 @@ const Home = () => {
     { 
       id: 'experience', 
       title: 'Experience', 
-      iconPath: `${basePath}icons/experience.png`,
+      iconPath: getAssetPath('icons/experience.png'),
       color: '#8b5cf6'
     },
     { 
       id: 'projects', 
       title: 'Projects', 
-      iconPath: `${basePath}icons/projects.png`,
+      iconPath: getAssetPath('icons/projects.png'),
       color: '#10b981'
     },
     { 
       id: 'skills', 
       title: 'Skills', 
-      iconPath: `${basePath}icons/skills.png`,
+      iconPath: getAssetPath('icons/skills.png'),
       color: '#f59e0b'
     },
     { 
       id: 'achievements', 
       title: 'Achievements', 
-      iconPath: `${basePath}icons/acheivements.png`,
+      iconPath: getAssetPath('icons/acheivements.png'),
       color: '#ef4444'
     }
   ];
@@ -160,7 +170,7 @@ const Home = () => {
               }}
             >
               <img
-                src={`${basePath}pfp.png`}
+                src={getAssetPath('pfp.png')}
                 alt="Profile"
                 style={{
                   width: '100%',
@@ -346,7 +356,7 @@ const Home = () => {
               Explore more about me!!
             </span>
             <img
-              src={`${basePath}icons/curvedarrow.png`}
+              src={getAssetPath('icons/curvedarrow.png')}
               alt="Arrow"
               style={{
                 width: '100px',
@@ -505,7 +515,7 @@ const Home = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <img 
-                  src={`${basePath}icons/email.png`}
+                  src={getAssetPath('icons/email.png')}
                   alt="Email"
                   style={{ width: '1rem', height: '1rem', objectFit: 'contain' }}
                 />
@@ -518,7 +528,7 @@ const Home = () => {
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <img 
-                  src={`${basePath}icons/phone.png`}
+                  src={getAssetPath('icons/phone.png')}
                   alt="Phone"
                   style={{ width: '1rem', height: '1rem', objectFit: 'contain' }}
                 />
@@ -534,7 +544,7 @@ const Home = () => {
             {/* Location on next line */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#0f172a', fontSize: '0.9rem' }}>
               <img 
-                src={`${basePath}icons/location.png`}
+                src={getAssetPath('icons/location.png')}
                 alt="Location"
                 style={{ width: '1rem', height: '1rem', objectFit: 'contain' }}
               />

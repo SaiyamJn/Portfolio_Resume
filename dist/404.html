@@ -7,9 +7,22 @@
     <script>
       // Single Page Apps for GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
-      var pathSegmentsToKeep = 1; // Change this to match your repo name depth (1 for /repo-name/, 0 for root)
-      var repoName = 'Portfolio_Resume'; // Change this to match your repository name
-      
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+  </head>
+  <body>
+    <script>
+      // Redirect to index.html with the path as a query parameter
+      var pathSegmentsToKeep = 1;
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
@@ -19,6 +32,5 @@
         l.hash
       );
     </script>
-  </head>
-  <body></body>
+  </body>
 </html>
