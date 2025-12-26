@@ -6,7 +6,8 @@ import Skills from './pages/Skills';
 import Achievements from './pages/Achievements';
 
 // Get base path from vite config (for GitHub Pages)
-const basePath = import.meta.env.BASE_URL;
+// BASE_URL will be '/Portfolio_Resume/' in production build, '/' in dev
+const basePath = import.meta.env.BASE_URL || '/';
 
 const App = () => {
   return (
