@@ -6,31 +6,34 @@ const Home = () => {
   const navigate = useNavigate();
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
+  // Get base path for GitHub Pages
+  const basePath = import.meta.env.BASE_URL;
+
   const aboutDescription = 'Learn about my educational background, journey in technology, and how I approach building products that matter. Discover my passion for AI-native development and full-stack engineering.';
 
   const sectionIcons = [
     { 
       id: 'experience', 
       title: 'Experience', 
-      iconPath: '/icons/experience.png',
+      iconPath: `${basePath}icons/experience.png`,
       color: '#8b5cf6'
     },
     { 
       id: 'projects', 
       title: 'Projects', 
-      iconPath: '/icons/projects.png',
+      iconPath: `${basePath}icons/projects.png`,
       color: '#10b981'
     },
     { 
       id: 'skills', 
       title: 'Skills', 
-      iconPath: '/icons/skills.png',
+      iconPath: `${basePath}icons/skills.png`,
       color: '#f59e0b'
     },
     { 
       id: 'achievements', 
       title: 'Achievements', 
-      iconPath: '/icons/acheivements.png',
+      iconPath: `${basePath}icons/acheivements.png`,
       color: '#ef4444'
     }
   ];
@@ -157,7 +160,7 @@ const Home = () => {
               }}
             >
               <img
-                src="/pfp.png"
+                src={`${basePath}pfp.png`}
                 alt="Profile"
                 style={{
                   width: '100%',
@@ -343,7 +346,7 @@ const Home = () => {
               Explore more about me!!
             </span>
             <img
-              src="/icons/curvedarrow.png"
+              src={`${basePath}icons/curvedarrow.png`}
               alt="Arrow"
               style={{
                 width: '100px',
@@ -502,7 +505,7 @@ const Home = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <img 
-                  src="/icons/email.png" 
+                  src={`${basePath}icons/email.png`}
                   alt="Email"
                   style={{ width: '1rem', height: '1rem', objectFit: 'contain' }}
                 />
@@ -515,7 +518,7 @@ const Home = () => {
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <img 
-                  src="/icons/phone.png" 
+                  src={`${basePath}icons/phone.png`}
                   alt="Phone"
                   style={{ width: '1rem', height: '1rem', objectFit: 'contain' }}
                 />
@@ -531,7 +534,7 @@ const Home = () => {
             {/* Location on next line */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#0f172a', fontSize: '0.9rem' }}>
               <img 
-                src="/icons/location.png" 
+                src={`${basePath}icons/location.png`}
                 alt="Location"
                 style={{ width: '1rem', height: '1rem', objectFit: 'contain' }}
               />
