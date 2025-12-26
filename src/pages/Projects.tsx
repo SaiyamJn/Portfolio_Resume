@@ -51,6 +51,17 @@ const Projects = () => {
         'Generated product recommendations from frequent itemsets with lift and confidence metrics.',
         'Visualized actionable rules to support retail decision-making.'
       ]
+    },
+    {
+      name: 'Financial Research AI Agent',
+      date: '2025',
+      stack: 'Python, Pandas, Scikit-Learn, Apriori, FP-Growth',
+      link: 'https://github.com/SaiyamJn/Association-Rule-Mining.git',
+      bullets: [
+        'Association-rule mining to predict customer purchase patterns using Apriori and FP-Growth.',
+        'Generated product recommendations from frequent itemsets with lift and confidence metrics.',
+        'Visualized actionable rules to support retail decision-making.'
+      ]
     }
   ];
 
