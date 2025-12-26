@@ -31,6 +31,19 @@ const Projects = () => {
       ]
     },
     {
+      name: 'Financial Research AI Agent',
+      date: '2025',
+      stack: 'Python, FastAPI, LangGraph, LangChain, MongoDB, Redis, React, Plotly, yfinance, Gemini, Groq',
+      link: 'https://github.com/SaiyamJn/Financial-Research-Agent',
+      bullets: [
+        'Built an AI-powered financial research assistant for Indian stock market analysis with real-time data ingestion and interactive visualizations.',
+        'Implemented technical analysis features including 20-day Moving Average and 14-day RSI with Plotly-based charts and two-stock comparison.',
+        'Designed multi-agent AI workflows (Research, Sentiment, Portfolio, Unified Analysis) using LangGraph and LangChain.',
+        'Integrated LLMs (Google Gemini and Groq Llama3) to generate intelligent insights, sentiment analysis, and portfolio-level summaries.',
+        'Developed a scalable FastAPI backend with MongoDB for persistence and Redis for caching, paired with a React + Vite frontend.'
+      ]
+    },
+    {
       name: 'Krishi AI — Smart Agriculture App',
       date: 'Sept 2025',
       stack: 'React Native, TypeScript, REST APIs, SQLite, TensorFlow Lite',
@@ -51,18 +64,7 @@ const Projects = () => {
         'Generated product recommendations from frequent itemsets with lift and confidence metrics.',
         'Visualized actionable rules to support retail decision-making.'
       ]
-    },
-    {
-      name: 'Financial Research AI Agent',
-      date: '2025',
-      stack: 'Python, Pandas, Scikit-Learn, Apriori, FP-Growth',
-      link: 'https://github.com/SaiyamJn/Association-Rule-Mining.git',
-      bullets: [
-        'Association-rule mining to predict customer purchase patterns using Apriori and FP-Growth.',
-        'Generated product recommendations from frequent itemsets with lift and confidence metrics.',
-        'Visualized actionable rules to support retail decision-making.'
-      ]
-    }
+    }    
   ];
 
   const listStyle = {

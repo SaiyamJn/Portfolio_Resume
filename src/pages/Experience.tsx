@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import ResumeSection from '../components/ResumeSection';
 import AnimatedBlobBackground from '../components/AnimatedBlobBackground';
 import TopNav from '../components/TopNav';
-import capablAssistantshipCert from '../../assets/Certificates/Capabl Assistantship.png';
+import capablAssistantshipCert from '../../Assets/Certificates/Capabl Assistantship.png';
 
 type Experience = {
   company: string;
