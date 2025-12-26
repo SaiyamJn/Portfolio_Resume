@@ -47,6 +47,13 @@ jobs:
         with:
           path: './dist'
       
+      - name: Verify build output
+        run: |
+          echo "Checking dist folder contents:"
+          ls -la dist/
+          echo "Checking index.html:"
+          head -20 dist/index.html
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
