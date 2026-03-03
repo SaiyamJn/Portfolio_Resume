@@ -469,6 +469,53 @@ const Home = () => {
           ))}
         </div>
 
+        {/* External design portfolio button */}
+        <div
+          style={{
+            marginTop: '1.5rem',
+            display: 'flex',
+            justifyContent: 'center',
+            width: '100%'
+          }}
+        >
+          <a
+            href="https://saiyamjn.github.io/Portfolio_Design/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '0.85rem 1.8rem',
+              borderRadius: '999px',
+              background: '#0f172a',
+              color: '#e5e7eb',
+              textDecoration: 'none',
+              fontSize: '0.95rem',
+              fontWeight: 600,
+              letterSpacing: '0.03em',
+              textTransform: 'uppercase',
+              boxShadow: '0 12px 30px rgba(15,23,42,0.45)',
+              border: '1px solid rgba(148,163,184,0.5)',
+              cursor: 'pointer',
+              transition: 'all 0.25s ease',
+              gap: '0.5rem'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = '#020617';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 18px 40px rgba(15,23,42,0.65)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = '#0f172a';
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 12px 30px rgba(15,23,42,0.45)';
+            }}
+          >
+            View my design portfolio
+          </a>
+        </div>
+
         {/* Contact Section - Small Pill Shaped at Bottom */}
         <div
           style={{
