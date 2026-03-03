@@ -30,6 +30,17 @@ const Projects = () => {
       ]
     },
     {
+      name: 'AiRec - AI Recommendation System',
+      date: '2025-2026',
+      stack: 'Python, FastAPI, React, ML, PostgreSQL',
+      link: 'https://github.com/VINYAS-BTW/ai-rec.git',
+      bullets: [
+        'Built an AI-driven web app that personalizes content recommendations from user behavior data.',
+        'Developed secure REST APIs and modular services for training and serving recommendation models.',
+        'Delivered an end-to-end pipeline from data ingestion to frontend integration to improve engagement.'
+      ]
+    },
+    {
       name: 'Financial Research AI Agent',
       date: '2025',
       stack: 'Python, FastAPI, LangGraph, LangChain, MongoDB, Redis, React, Plotly, yfinance, Gemini, Groq',
